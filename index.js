@@ -15,16 +15,22 @@ async function getImages(query) {
   }
 }
 
-//getImages(endpoint);
+getImages(endpoint);
 
 
 const button = document.querySelector("button")
-
 const returnImg = document.getElementsByClassName("img1")
+const sumbitBtn = document.getElementsByClassName(".submit")
+const userQuery = document.getElementsByClassName(".search")
 
 button.addEventListener("click", () => {
-    console.log("het")
-    // let img = getImages(endpoint)
-    // return returnImg.innerHTML = "<img src=img />";
+   
+    let img = getImages(endpoint)
+    return returnImg.innerHTML = `<img src=img />`;
 })
 
+
+sumbitBtn.addEventListener("click", () => {
+    let userReq = getImages(userQuery)
+    returnImg.innerHTML = `<img src=${userReq} />`;
+})
