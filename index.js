@@ -15,4 +15,16 @@ async function getImages(query) {
   }
 }
 
-getImages(endpoint);
+//getImages(endpoint);
+
+
+const button = document.querySelector("button")
+
+const returnImg = document.getElementsByClassName("img1")
+
+button.addEventListener("click", () => {
+    console.log("het")
+    // let img = getImages(endpoint)
+    // return returnImg.innerHTML = "<img src=img />";
+})
+
